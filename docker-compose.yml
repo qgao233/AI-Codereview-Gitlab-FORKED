@@ -14,3 +14,10 @@ services:
     env_file:
       - ./conf/.env
     restart: unless-stopped
+    networks:
+      - gitlab_network
+
+networks:
+  gitlab_network:
+    external: true
+    name: gitlab_network
